@@ -1,0 +1,15 @@
+<h1> Busqueda: <small> {{termino}} </small></h1>
+<hr>
+
+<div class="row">
+  <div class="alert alert-warning col-md-12" *ngIf="heroes.length == 0">
+    <img src="../../../assets/img/error.png" style="width: 40px; height: 40px; float: left; padding: 7px;">
+      <p style="float: left; padding-top: 10px;"> No hay resultados para la busqueda: {{termino}} </p>
+    </div>
+</div>
+
+<div class="card-columns">
+  
+  <app-heroe-tarjeta [heroe]="heroe" [index]="heroe.idx" *ngFor="let heroe of heroes"></app-heroe-tarjeta>
+ 
+</div>
